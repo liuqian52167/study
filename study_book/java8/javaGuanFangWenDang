@@ -63,4 +63,90 @@
 ## 10.13 3个近期添加的异常特性
 ## 10.14 使用异常
 
+# 第13章 I/O
 
+## I/O基础：
+流：流是一种抽象，要么产生信息，要么使用信息。
+字节流和字符流。
+字节流为处理字节的输入输出提供了方法。
+字符流：为处理字符的输入输出提供了方便的的方法。
+字节流类：字节流是通过两个类层次定义的。顶级抽象类InputStream和OutStream。每个抽象类都有几个处理各种不同的设备的具体子类。
+BufferedInputStream 缓冲的输入流
+BufferedOutputStream 缓冲的输出流
+ByteArrayInputStream 读取字节数组内容的输入流
+ByteArrayOutputStream 想直接数组写入内容的输出流
+DataInputStream 包含读取java标准数据类型的方法的输入流
+DataOutputStream 包含写入Java标准数据类型的方法的输出流
+FileOutputStream想文件写入内容的输出流
+FileInputStream 读取文件的输入流
+Filter OutputStream 实现outputStream
+FilterInputStream 实现inputStream
+inputStream 描述流输入的抽象类
+OutputStream 描述流输出的抽象类
+ObjectInputStream 用于对象的输入流
+ObjectOutputStream 用于对象的输出流
+pipedInputStream 输入管道
+PipedOutputStream 输出管道
+PrintStream 包含print和Println方法的输出流
+Push Back Input Stream支持一字节取消获取输入流，这种刘翔输入流返回一个字节。
+SequenceInputStream由两个或者多个顺序依次读取的输入流组合而成的输入流。
+
+
+抽象类InputStream和OutputStream定义了其他流类实现的关键方法。read() write().这盎格方法分别读取和写入字节数据。
+
+
+
+字符流类
+字符流通过两个类层次定义。顶层抽象类Reader和Writer。
+BufferedReader 缓冲的输入字符流
+BufferedWriter 缓冲的输出字符流
+charAarrayReader 从字符数组读取呢你容的输入流
+CharArrayReader 向字符数组写入内容的输出流
+FileReader 从文件读取内容的输入流
+FileWriter 向文件中写入内容的输出流
+FilterReader 过滤器的读取器
+FilterWriter 过滤器的写入器
+InputStreamReader 将字节转换为字符的输入流
+lineNumberReader计算行数的输入流
+outputStreamwriter 将字符转换字节的输出流
+PipedReader 输入管道
+PipedWriter 输出管道
+printWrited 包含print和println()的输出流
+PushBackReader 允许字符返回到输入流的输入流
+Reader 描述字符流输入的抽象类。
+StringReader从字符串读取内容的输入流
+StringWriter 向字符串写入内容输出流
+Writer描述字符串输出的抽象类
+
+3预定义流
+所有Java程序自动导入java.lang包，这个包定义了System类，该类封装了运行时的某些方法。System包哦阔三个预定义的六变量：in\out\err。这些变量在System类中呗声明为public、static、final
+System.out 引用标准的输出流，默认是控制台。System.in引用标准的输入流，默认键盘。System.err引用标准的错误流，默认情况控制台。
+
+读取控制台输入：Java中控制台输入时System.in读取完成的为了获得与控制台关联基于字符的流，可以在BufferedReader对象中封装System.in。
+构造函数Buffer额度Reader（Reader inputReader）
+input Reader是与即将创建的BufferedReader的hi里链接的流Reader是抽象类，InputStreamReader是他的一个具体的子类，将该类字节转为字符。为了获得与System.in连接的InputStreamReader对象使用下面的构造函数。
+inputStreamReader （Input Stream inputStream）
+因为System.in引用inputStream 类型的对象，所以可以用作inputStream参数。
+BufferedReader  br = new BufferedReader(new INputStreamReader(System.in));
+
+
+
+读取字符
+为了从Buffered 对象读取字符，需要使用read（）方法。
+int read() throws IOException
+每次调用read() 方法都会从输入读取一个字符，并将之作为整型数值返回。如果到达流的末尾，就返回-1.可以看出这种发发可能抛出IOException异常。
+
+读取字符串
+    StringReadLine （）throwsIOException
+从键盘读取字符串，可以使用BufferedReader类的realLine()方法，
+
+下面程序演示bufferedReader类和readlLine（） 方法
+//
+import java.io.*;
+class readlins{
+    public static void main(String args[]) throws IOException{
+        bufferedReader
+    }
+}
+
+向控制台写输出
