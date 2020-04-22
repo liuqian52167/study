@@ -95,4 +95,4 @@ ACID:原子性ctomicity、一致性consistency、隔离性isolation、持久性d
  
  #### 1.。3.4 MySQL中的事务
  
- MySQL提供了两种事务型存储引擎InnoDB和NDBCluster。另外还有一些
+ MySQL提供了两种事务型存储引擎InnoDB和NDBCluster。另外还有一些第三方
