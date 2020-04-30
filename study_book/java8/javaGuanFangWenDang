@@ -177,4 +177,16 @@ void close() throws IOException
 
 关闭文件会释放为文件分配的系统资源，从而允许其他文件使用这些资源文件。关闭文件会导致内存泄漏，因为未使用的资源没有被释放。
 
-从jdk1.7 开始后close()是由方法java.lang包中的
+从jdk1.7 开始后close()是由方法java.lang包中的AutoCloseable接口指定的。io包中的Closeable接口继承了AutoCloseable接口
+
+自动关闭文件
+jdk7 增加了一个新特性，该特性提供了另外一种管理资源的方式，这种方式能自动关闭文件。这个图形称为自动资源管理。
+try(resource-specification){
+//use the resource
+}
+其中，resource-apecification 是生命和初始化资源的语句。该语句包含一个变量声明，在该变量声明中使用将呗管理的对象引用初始
+化变量。当try代码块结束时，自动释放放资源。对于文件，这意味着自动关闭文件（因此不需要现实的调用close方法）。只有实现了
+AutoCloseable接口的资源才能使用带资源的try语句。AutoCloseable接口有java.lang包定义，该接口定义了close方法Javaio包中
+Closeable接口继承自AutoCloseeable接口。所有流类都是先了这两个接口。当时有流时 包括使用文件流，可以使用带资源的try语句。
+
+
