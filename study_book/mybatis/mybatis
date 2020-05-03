@@ -209,8 +209,95 @@
             结果映射
             插件：第三方插件。
 # 第二章 基础支持层
-
+    基础支持层mybatis的最低层，支撑着整个核心处理层。
 ## 2.1解析器模块
+    mybatis中涉及到多个xml配置文件，xml常见的解析方式三种DOM\SAX StAX三种。
+    DOM:
+        基于属性结构的xml解析方式，他会将整个xml文档读入内存并构建一个DOM树，基于这棵树型结构对各个节点进行操作。xml每个
+        节点都市一个文档节点，整个文档是一个文档节点，每个xml标签是一个属性节点，包含xml标签对应一个元素节点是文本节点，
+        每个xml属性是一个属性节点。注释属于注释节点。
+        DOM解析最主要的好处是易于编程，可以根据需求在树形结构的各节点导航。缺点是消耗资源大。
+    SAX:
+        基于事件模型的xml解析方式，不需要将所有的加载到内存，所以占用资源较小。
+        当SAX解析到某个类型节点时，会触发注册在该类型节点上的回调函数，开发人员只需继承SAX提供的DefaultHandler基类，重写
+        相应事件的处理方法并对该方法进行注册即可。
+        缺点：徐娅开发人员自己负责维护业务逻辑涉及的多层节点之间的关系。如某节点与父节点之间的关系。另一方面流式处理，
+        只能向后单向进行，还不能提供写xml的我功能。
+    StAX:
+        基于jdk提供的一套解析xml的api，它很好的支持了DOM和sax解析方式，JAXP是JavaEE的一部分。它由javax.xml\org.w3.dom\
+        org.xml.sax包及其子包组成。
+        StAX解析把xml文档当成一个事件流进行处理，但采取拉模式。拉模式是应用程序通过调用解析器进行解析的进程。应用程序控
+        制着整个解析过程的推进，可以简化处理xml的代码，并且决定何时停止解析，，同时支持处理多个xml文档。
+        StAX 有两种处理xml的API，提供了不同程度的抽象。一直基于指针的API，效率高但抽象程度低，另一种是基于迭代器的API
+        它允许应用程序吧xml文档作为一系列事件对象处理，效率低但抽象程度高/
+        
+    xPath
+        mybatis在初始化过程中采用om解析方式解析mybatis-config.xml配置文件和映射文件，并结合Xpath解析配置文件。
+        xpath：是一种为查询xml文档而设计大的语言，可以与DOM解析方式配合使用，实现对xml文档的解析。
+        xpath使用路径表达式来选取xml文档中指定的节点或者节点集合，与url路径类似。
+            表达式
+            nodeName 选取指定节点的所有节点
+            /从根节点选取指定节点
+            /根据指定的表达式，在整个文档中选取匹配的节点，这里并不会考虑匹配节点在文档中的位置
+            。选取当前节点
+            。。选取当前节点的父节点
+            @ 选取属性
+            * 匹配任何元素节点
+            @* 匹配任何属性节点
+            node() 匹配任何类型的节点
+            text（） 匹配文本节点
+            | 选取若干个路径
+            [] 指定某个条件，用于查找某个特定节点或者包含某个指定值的节点
+            
+     Java实现xpath
+     public class XPathTest{
+        public static void main(String[] args)throws Exceptioon{
+           DocumentBuilderFactory doccumentBuilderFactory = DocumentBuilderFactory.newInstance();
+           //开启验证
+           documentBuilderFactory.setValidating(true);
+           documentBuilderFactory.setNamespaceAware(false);
+           documentBuilderFactory.setIgnoringComments(true);
+           documentBuilderFactory.setIgnoringElementWhiitespace(false);
+           documentBuilderFactory.setCoalescing(false);
+           documentBuilderFactory.setExpandEntityReferences(true);
+           
+           //创建DocumentBuilder
+           DocumentBuilder builder = documentBuilderfactory.newDocumentBuilder();
+           //设置异常处理对象
+           builer.setErrorHandler(new ErrorHandler(){
+            @Override
+            public void fatalError(SAXParseRxception exceptin)throws SAXEception{
+                 System.out.println("error:"exception.getMessage());
+            }
+            @Override
+             public void warning(SAXParseRxception exceptin)throws SAXEception{
+                 System.out.println("warn:"exception.getMessage());
+              }
+           });
+           
+           //将文档加载到一个Document对象中
+           Document doc=builer.parse("src/com/xxx/inventory.xml");
+           //创建xpathFactory
+           XPathFactory factory = XpathFactory.newInstance();
+           //创建xpath对象
+           XPath xpath = factory.newXPath();
+           //编译xpath表达式
+           XPathExpression expr = xpath.compile("//book[author='Neal Stephenson']/title/text()");
+           //通过xpath表达式得到结果，第一个参数制定了xpath表达式查询的上下文节点，在指定系欸但下查找符合xpath节点。
+           Object result = expr.evaluate(doc,XPathCnstants.NODESET);
+           System.out.println(查询作者为Neal Stephenson的图书标题");
+           NodeList nodes=(NodeList)result;//强制转换
+           for(int i =0;i<nodes.getLength();i++){
+                System.out.println(nodes.item(i).getNdeValue());
+           }
+           System.out.println(查询作者为Neal Stephenson的图书属性和标题");
+           nodes = (nodeList) xpath.evaluate("/book[@year>1997]/@*|//book[@year>1997]/title/text()",doc,XPathConstants.NODESET);
+            for(int i=0;i<nodes.getLength();i++){
+                System.out.println(nodes.item(i).getNodeValue());
+            }           
+        }
+     }
+     mybatis22页
 ## 2.2反射工具箱
 ## 2.3 类转换
 ## 2.4 日志模块
