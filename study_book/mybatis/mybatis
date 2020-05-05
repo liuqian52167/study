@@ -297,7 +297,38 @@
             }           
         }
      }
-     mybatis22页
+     注意XpathExpression。evaluate（）方法的第二个参数，它指定了Xpath表达式的结果类型，在XPathCoonstants类中提供了nodeSet、
+     bolean、number、String和node五种类型。
+     
+     
+     XpathParser
+        mybatis提供的我XParser类封装了前面涉及的Xpath、document和EntityResolver
+                xpath         document         entityResolve
+                                    xpathparser
+                                    xnode
+     xpathperser各个字段的含义和功能
+        private DOcument document；//Document对象
+        private boolean validation；//是否开启验证
+        private EEntityResolver entityResolver;//用于加载本地DTD文件
+        private Properties variables；//mybatis-config,xml中<peopteries>标签定义的键值对集合 
+        private XPath xpath；//xpath对象
+        默认情 下， XML 文档进 验证时，会根据 XML 文档开始位置指定的网址加载对
+        DTD 件或 XSD 文件 如果解析 mybati s-config .xm 配置文件，默认联网加载
+        ttp://mybatis.org/dtd/mybatis-3-config.dtd 这个 DTD 文档，当网络比较慢时会导致验证过程缓慢。
+        在实践 往往会提前设置 EntityResolver 接口对象加载本地的 DTD 文件，从而避免联网加载
+        文件。 XMLMapperEntityResolver MyBati 提供的 EntityRe so Iver 接口的实现 ，
+        
+        EntityResolver接口核心是resolveEntity（）方法，XMLMapperEntityResolver的实现。
+        public classXMLMapperEntityResoover implements EntityResolver{
+            //指定 mybatis config xm 件和映射文件对反的 DTD Systemid
+            private static final String IBATIS CONFIG SYSTEM = ” ibatis-3-config . dtd”;
+            private static final Str ng IBATI MAPPER_SYSTEM = ” ibatis-3-mapper.dtd” J 
+            pr vate stat final String MYBATIS CONFIG SYSTEM mybat s-3-config. dtd”; 
+            private static final String MYBATIS MAPPER SYSTEM = ” mybatis-3-mapper.dtd”;
+            ／／指定 mybatis config.xm 文件和映射文件对应的 DTD 文件的具体位置
+            
+        }
+        mybatis技术内幕37页
 ## 2.2反射工具箱
 ## 2.3 类转换
 ## 2.4 日志模块
