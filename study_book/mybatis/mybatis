@@ -1,0 +1,355 @@
+# 第一章 mybatis快速入门
+##1.1ORM简介
+    jdbc 是java与数据库交互的统一的API。
+        1注册数据库驱动类，明确指明数据库URL、用户名、密码等连接信息
+        2通过DriverManager打开数据库连接
+        3通过数据库连接创建Statement对象
+        4通过数据库连接创建statement对象执行sql语句，得到ResultSet对象
+        5通过ResultSet读取数据，并将数据转换为javaBean对象
+        6关闭ResultSet、statement对象以及数据库连接、释放相关资源
+      
+    ORM对象关系映射。
+        对象关系映射主要功能就是根据映射配置文件，完成数据在对象模型与关系模型之间的映射，也屏蔽了上述重复代码，只暴露简单的
+        API供开发人员使用。
+      
+## 1.2常见持久化框架
+ 常见有Hibernate 。hibernate通过hbm.xml映射文件维护java类与数据库表的映射文件。通过Hibernate的映射，每个java类和数据关系类一一对应。
+        eg：User.hbm.xml
+        <hibernate-mapping>
+            表和累的映射
+            <class name ="com.xxx.User" table = "t_user">
+                主键映射
+                <id name="id" column="id">
+                属性映射
+                <property name "name" column="name">
+                表之间关系映射
+                <set name="orders" cascade="save-update,delete">
+                    <key column="user_id"/>
+                    <one-to-many class="cpm.xxx.Order"/>
+                </set>
+            </class>
+        </hibernate-mapping>
+        
+     双向关联
+                <hibernate-mapping>
+                    表和累的映射
+                    <class name ="com.xxx.User" table = "t_user">
+                        主键映射
+                        <id name="id" column="id">
+                        属性映射
+                        <property name "name" column="name">
+                        表之间关系映射
+                        <many-to-one name=="User" column="user_id">
+                        </manny-to-onr>
+                    </class>
+                </hibernate-mapping>
+    
+    SpringJDBC
+    对原生的jdbc进行封装，SpringJDBC没有映射文件
+    
+## 1.3 mybatis实例
+   mybatis，轻量级框架。动态变化相对Hibernate，
+    mybatis配置实例
+        <?xml version="1.0" encoding="UTF-8">
+        <!DOCTYPE configuratioon PUBLIC,,,>
+        <configuration>
+            定义属性值
+            <properties> 
+                <property name="username" value="root"/>
+                 <property name="id" value=123">
+                </property>
+            </properties>
+            全局配置
+            <settings>
+                <setting name="cacheEnabled" value="ture"/>
+                ......
+                .......
+            </settings>
+            <typeAliases>
+                <typeAlisa type="com.xxx.Blog" alias="Blog"/>
+                。。。。。
+                
+            </typeAliaes>
+            <environments default="development">
+                <environment id="development">
+                    配置事务管理器的类型
+                    <transactionManager type="JDBC"/>
+                    配置数据源类型以及数据库连接的相关信息
+                    <dataSource type="POOLED">
+                        <property name="driver" value="com.mysql.jdbc.Driver"/>
+                        <prperty name="url" value="jdbc:mysql://localhost:3306/test"/>
+                        <property name="username" value="root"/>
+                        <property name="password" value="root"/>
+                     </dataSource>
+                </environment>
+            </environments>
+            <mappers>
+                </mapper resource="com/xxx/BlogMapper.xml"/>
+            </mappers>
+        </configuration>
+        
+        
+     具体例子
+     <?xml version 1. encoding UTF ？〉
+     <!DOCTYPE mapper PUBLIC ”-//mybatis . org//DTD Mapper 3 . 0//EN” ...>
+     <mapper namespace=” com . xxx.BlogMapper” >
+            〈！－定义映射规 一〉
+              <resultMap id=” de ta ledBlogResultMap type Blog
+              <constructor> < !- 造函数映射一〉
+                  <idArg column=” blog id” ] ava Type=” int” />
+             </constructor> 
+            < ! 属性映 －〉
+            <result property=” title” column=” blog_ title” />
+             ！一对象属性的映射 同时也 一个夜套映射 后面会详细分析嵌套映射的处理过程一〉
+             <assoc ation property=” author” resultMap=” authorResult” />
+             〈！一集合映射 ，也 一个匿名 嵌套映射一〉
+             <collection property=” posts” of Type=” Post” >
+                 <id property=” id” column=” post id" /> 
+                 <result property=” content” column=” post content”/>
+              </collection>
+         </resultMap> 
+             <resultMap id=” authorRes u lt” type=” Author” >
+             <id property=” id” column=” author_id" /> 
+             <result property=” username ” column=” username ” />
+             <result property=” password” column=” password” />
+             <result property=” email” column=” email” /:>
+         </resultMap>
+     ！一定义 SQL 语句，除了 select 节点，还可以定义 insert, update delete 节点 为了便于描述，
+     后面统称为“SQL 节点”
+         <select selectBlogDetails resultMap=” detailedBlogResultMap” >
+             select B. id as blog_id, B. title as blog_title , B.author_id as blog_author_id, 
+             A. id as author_ id, A. username as author_ username , A. password as author _password, 
+             A.email as author email , P .id as post id, P . blog id as p ost blog id, 
+             P.content as post_content 
+             from Blog B left outer join Author A on B. author id = A. id 
+             left outer j Post P on B.id = P .blog id where B.id = Jf{id} 
+         </select> 
+     </mapper>
+        
+        
+        
+    java加载上述配置文件过程
+        1应用程序首先加载mybatisConfig。xml文件
+        2根据配置文件的内容创建SqlSessionFactory对象
+        3通过sqlSessionFactory创建SqlSession对象。
+        4sqlSession接口定义了执行sql语句，完成数据操作
+        5最后通过SqlSession对象提交事务，并关闭SqlSession对象。
+        
+       过程实现
+        public class Main{
+            public static viod main(String []args) throws Exception{
+                String resource="com/xxx/mybatis-config.xml";
+                InputStream inputStream = Resource.getResourceAsStream(resource);
+                //加载mybatis-config.xml并创建SqlSeesionFactory对象
+                SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+                //创建sqlSession对象
+                SqlSession session = sqlSessinFactory.openSession();
+                try{
+                    Map<String,Object>parameter=new HashMap<>();
+                    parameter.put("id",1);
+                    //执行select语句，并将ResultSet映射成对象并返回
+                    Blog blog =(Blog)session.selectOOne("com.xxx.BlogMapper.selectBlogDetatils",parameter);
+                    //输出Blog对象
+                        System.out..println(blog);
+                }finally{
+                    session.close();
+                 }
+            }   
+         }
+## 1.4整体框架
+    mysbatis框架整体分为三层，分别是基础支持层、核心处理曾和接口层。
+        基础支持层：
+            数据源模块
+                数据源是实际开发中常用的组件之一。 现在开源的数据源都提供了比较丰富的功能，
+                例如，连接池功能、检测连接状态等，选择性能优秀的数据源组件对于提升 ORM
+                架乃至整个应用的性能都是非常重要的。 MyBatis 自身提供了相应的数据源实现，当
+                MyBatis 也提供了与第 方数据源集成的接口，这些功能都位于数据源模块之中
+            事物管理模块
+                mybatis对数据库中的事务进行了抽象，其自身提供了相应的事务接口和简单实现。mybatis和Spring框架集成，并由
+                Spring框架管理事务。
+            缓存模块
+                缓存模块：
+                    优化数据库性能，减小数据压力。
+            Bingding模块
+                指定映射文件的sql节点，如果出现拼写错误，只能在运行期间发现。mybatis通过binding模块将用户自定义demapper
+                接口与映射配置文件关联起来，系统可以调用自定义mapper接口中的方法执行相应的sql语句完成数据库操作。
+            反射模块
+                反射模块专门为java远射个的反射进行了良好的封装，提供了更加简易的API，方便上层调用。
+            类型转换
+                为简化配置文件提供了别名机制，该机制是类型转换模块的主要功能过之一。类型转换模块的另一个功能是实现jdbc类型
+                与java类型之间的转换，在sql语句绑定实参以及映射查询结果集都会涉及。在为 Sql句绑定实参时， 会将数据由 
+                Java类型转换 JDBC 类型；而在映射结果集时，会将数据由 JDBc 类型转换成 Java 类型。
+            日志模块
+                日志主要是集成多种第三方日志框架。
+            资源加载
+                主要是对类加载器的封装，确定类加载器的使用顺序，并提供了加载文件以及其他资源文件的功能。
+            解析器模块
+                解析器俩功能：
+                    1对xPath进行封装，为Mybatis初始化时解析mybatis-config。xml配置文件以及映射配置文件提供支持；
+                    2为处理动态SQL语句中占位符提供支持。
+        接口层：SqlSession
+            接口层相对简单，其核心是 SqlSession 接口，该接口中定义了 MyBatis 暴露给应用程序调
+            用的 PI ，也就是上层应用与 MyBatis 交互的桥梁。接口层在接收到调用请求时，会调用核心
+            处理层的相应模块来完成具体的数据库操作。
+        核心处理层：实现了mybatis的核心处理流程，其中包括mybatis初始化以及完成一次数据操作涉及的全部流程。
+            配置解析
+                在mybatis初始化过程中，会加载mybatis-config.xml配置文件映射配置文件以及Mapper接口中的注解信息，解析后的
+                配置信息会形成相应的对象并把存到Configuration对象即＜resultMap＞节点（即 ResultSet 的映射规则）会被解析
+                成 ResultMap 对象：示例中定义的＜result>节点（即属性映射）会被解析成ResultMapping 对象 之后，
+                利用该 onfiguration 对象创建 Sq!Sessi onFactory 对象MyBatis 初始化之后，开发人员可以通过初始化得到 
+                Sq!SessionFactory 创建Sq!Session 对象并完成数据库操作。
+            参数映射
+            SQL解析
+                mybatis 实现动态sql语句功能，提供了多种动态sql语句对应的节点。
+            SQL执行
+                sql执行涉及多个组件，其中比较重要的就是Executor、StatementHandler、ParameterHandler和ResultSetHanddler。
+                    Executor主要负责维护一级缓存和二级缓存并提供事务管理的相关操作，它会将数据库的相关操作委托StatementHandler。
+                    StatementHandler首先通过ParameterHandler 完成SQL语句的实参绑定，然后通过java.sql.statement对象执行
+                    sql语句并得到结果集，最后通过ResultSetHandler完成结果集的映射，得到结果对象并返回。
+            结果映射
+            插件：第三方插件。
+# 第二章 基础支持层
+    基础支持层mybatis的最低层，支撑着整个核心处理层。
+## 2.1解析器模块
+    mybatis中涉及到多个xml配置文件，xml常见的解析方式三种DOM\SAX StAX三种。
+    DOM:
+        基于属性结构的xml解析方式，他会将整个xml文档读入内存并构建一个DOM树，基于这棵树型结构对各个节点进行操作。xml每个
+        节点都市一个文档节点，整个文档是一个文档节点，每个xml标签是一个属性节点，包含xml标签对应一个元素节点是文本节点，
+        每个xml属性是一个属性节点。注释属于注释节点。
+        DOM解析最主要的好处是易于编程，可以根据需求在树形结构的各节点导航。缺点是消耗资源大。
+    SAX:
+        基于事件模型的xml解析方式，不需要将所有的加载到内存，所以占用资源较小。
+        当SAX解析到某个类型节点时，会触发注册在该类型节点上的回调函数，开发人员只需继承SAX提供的DefaultHandler基类，重写
+        相应事件的处理方法并对该方法进行注册即可。
+        缺点：徐娅开发人员自己负责维护业务逻辑涉及的多层节点之间的关系。如某节点与父节点之间的关系。另一方面流式处理，
+        只能向后单向进行，还不能提供写xml的我功能。
+    StAX:
+        基于jdk提供的一套解析xml的api，它很好的支持了DOM和sax解析方式，JAXP是JavaEE的一部分。它由javax.xml\org.w3.dom\
+        org.xml.sax包及其子包组成。
+        StAX解析把xml文档当成一个事件流进行处理，但采取拉模式。拉模式是应用程序通过调用解析器进行解析的进程。应用程序控
+        制着整个解析过程的推进，可以简化处理xml的代码，并且决定何时停止解析，，同时支持处理多个xml文档。
+        StAX 有两种处理xml的API，提供了不同程度的抽象。一直基于指针的API，效率高但抽象程度低，另一种是基于迭代器的API
+        它允许应用程序吧xml文档作为一系列事件对象处理，效率低但抽象程度高/
+        
+    xPath
+        mybatis在初始化过程中采用om解析方式解析mybatis-config.xml配置文件和映射文件，并结合Xpath解析配置文件。
+        xpath：是一种为查询xml文档而设计大的语言，可以与DOM解析方式配合使用，实现对xml文档的解析。
+        xpath使用路径表达式来选取xml文档中指定的节点或者节点集合，与url路径类似。
+            表达式
+            nodeName 选取指定节点的所有节点
+            /从根节点选取指定节点
+            /根据指定的表达式，在整个文档中选取匹配的节点，这里并不会考虑匹配节点在文档中的位置
+            。选取当前节点
+            。。选取当前节点的父节点
+            @ 选取属性
+            * 匹配任何元素节点
+            @* 匹配任何属性节点
+            node() 匹配任何类型的节点
+            text（） 匹配文本节点
+            | 选取若干个路径
+            [] 指定某个条件，用于查找某个特定节点或者包含某个指定值的节点
+            
+     Java实现xpath
+     public class XPathTest{
+        public static void main(String[] args)throws Exceptioon{
+           DocumentBuilderFactory doccumentBuilderFactory = DocumentBuilderFactory.newInstance();
+           //开启验证
+           documentBuilderFactory.setValidating(true);
+           documentBuilderFactory.setNamespaceAware(false);
+           documentBuilderFactory.setIgnoringComments(true);
+           documentBuilderFactory.setIgnoringElementWhiitespace(false);
+           documentBuilderFactory.setCoalescing(false);
+           documentBuilderFactory.setExpandEntityReferences(true);
+           
+           //创建DocumentBuilder
+           DocumentBuilder builder = documentBuilderfactory.newDocumentBuilder();
+           //设置异常处理对象
+           builer.setErrorHandler(new ErrorHandler(){
+            @Override
+            public void fatalError(SAXParseRxception exceptin)throws SAXEception{
+                 System.out.println("error:"exception.getMessage());
+            }
+            @Override
+             public void warning(SAXParseRxception exceptin)throws SAXEception{
+                 System.out.println("warn:"exception.getMessage());
+              }
+           });
+           
+           //将文档加载到一个Document对象中
+           Document doc=builer.parse("src/com/xxx/inventory.xml");
+           //创建xpathFactory
+           XPathFactory factory = XpathFactory.newInstance();
+           //创建xpath对象
+           XPath xpath = factory.newXPath();
+           //编译xpath表达式
+           XPathExpression expr = xpath.compile("//book[author='Neal Stephenson']/title/text()");
+           //通过xpath表达式得到结果，第一个参数制定了xpath表达式查询的上下文节点，在指定系欸但下查找符合xpath节点。
+           Object result = expr.evaluate(doc,XPathCnstants.NODESET);
+           System.out.println(查询作者为Neal Stephenson的图书标题");
+           NodeList nodes=(NodeList)result;//强制转换
+           for(int i =0;i<nodes.getLength();i++){
+                System.out.println(nodes.item(i).getNdeValue());
+           }
+           System.out.println(查询作者为Neal Stephenson的图书属性和标题");
+           nodes = (nodeList) xpath.evaluate("/book[@year>1997]/@*|//book[@year>1997]/title/text()",doc,XPathConstants.NODESET);
+            for(int i=0;i<nodes.getLength();i++){
+                System.out.println(nodes.item(i).getNodeValue());
+            }           
+        }
+     }
+     注意XpathExpression。evaluate（）方法的第二个参数，它指定了Xpath表达式的结果类型，在XPathCoonstants类中提供了nodeSet、
+     bolean、number、String和node五种类型。
+     
+     
+     XpathParser
+        mybatis提供的我XParser类封装了前面涉及的Xpath、document和EntityResolver
+                xpath         document         entityResolve
+                                    xpathparser
+                                    xnode
+     xpathperser各个字段的含义和功能
+        private DOcument document；//Document对象
+        private boolean validation；//是否开启验证
+        private EEntityResolver entityResolver;//用于加载本地DTD文件
+        private Properties variables；//mybatis-config,xml中<peopteries>标签定义的键值对集合 
+        private XPath xpath；//xpath对象
+        默认情 下， XML 文档进 验证时，会根据 XML 文档开始位置指定的网址加载对
+        DTD 件或 XSD 文件 如果解析 mybati s-config .xm 配置文件，默认联网加载
+        ttp://mybatis.org/dtd/mybatis-3-config.dtd 这个 DTD 文档，当网络比较慢时会导致验证过程缓慢。
+        在实践 往往会提前设置 EntityResolver 接口对象加载本地的 DTD 文件，从而避免联网加载
+        文件。 XMLMapperEntityResolver MyBati 提供的 EntityRe so Iver 接口的实现 ，
+        
+        EntityResolver接口核心是resolveEntity（）方法，XMLMapperEntityResolver的实现。
+        public classXMLMapperEntityResoover implements EntityResolver{
+            //指定 mybatis config xm 件和映射文件对反的 DTD Systemid
+            private static final String IBATIS CONFIG SYSTEM = ” ibatis-3-config . dtd”;
+            private static final Str ng IBATI MAPPER_SYSTEM = ” ibatis-3-mapper.dtd” J 
+            pr vate stat final String MYBATIS CONFIG SYSTEM mybat s-3-config. dtd”; 
+            private static final String MYBATIS MAPPER SYSTEM = ” mybatis-3-mapper.dtd”;
+            ／／指定 mybatis config.xm 文件和映射文件对应的 DTD 文件的具体位置
+            
+        }
+        mybatis技术内幕37页
+## 2.2反射工具箱
+## 2.3 类转换
+## 2.4 日志模块
+## 2.5 资源加载
+## 2.6DataSource
+## 2,7 Transaction
+## 2.8 binding
+## 2.9 缓存模块
+
+# 第三章 核心处理器
+## 3.1 mybatis初始化
+## 3.2SqlNode 和sqlSource
+## 3.3 ResultSetHandler
+## 3.4KeyGenerator
+## 3.5 StatementHandler
+## 3.6 Executor
+## 3.7 接口层
+
+# 第四章 高级主题
+## 4.1 插件模块
+## 4.2 mybatis和Spring集成  
+## 4.3 拾遗
+
+
