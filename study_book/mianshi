@@ -188,6 +188,16 @@ Java 不能隐式执行向下转型，因为这会使得精度降低。
 但是使用 += 或者 ++ 运算符可以执行隐式类型转换。
 
 
+继承
+
+因为 ArrayList 是基于数组实现的，所以支持快速随机访问。RandomAccess 接口标识着该类支持快速随机访问。
+List<String> list =new ArrayList<>();
+List<String> SynList =Collections.SynchronizedList(list);
+或者使用
+List<String> list = new copyOnWriteArrayList<>();
+
+LinkedList 基于双向链表实现，使用 Node 存储链表节点信息。
+
 
 
 
