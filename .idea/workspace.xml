@@ -7,7 +7,6 @@
     <list default="true" id="c210a0cb-7673-4dbf-b067-4544d737b25d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study_book/jvm/jvm" beforeDir="false" afterPath="$PROJECT_DIR$/study_book/jvm/jvm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study_book/mianshi" beforeDir="false" afterPath="$PROJECT_DIR$/study_book/mianshi" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/study_book/mianshi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
+            <state relative-caret-position="5373">
               <caret line="199" selection-start-line="199" selection-end-line="199" />
             </state>
           </provider>
@@ -93,8 +92,8 @@
         <entry file="file://$PROJECT_DIR$/study_book/jvm/jvm">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="618">
-                <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+              <first_editor relative-caret-position="564">
+                <caret line="115" column="57" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
               </first_editor>
               <second_editor />
             </state>
@@ -164,7 +163,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +191,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -247,7 +246,8 @@
       <workItem from="1589680168111" duration="626000" />
       <workItem from="1589773759075" duration="611000" />
       <workItem from="1589953251171" duration="1885000" />
-      <workItem from="1590023820120" duration="5703000" />
+      <workItem from="1590023820120" duration="6151000" />
+      <workItem from="1590109269979" duration="10834000" />
     </task>
     <task id="LOCAL-00001" summary="java8官方文档 异常部分">
       <created>1586106685461</created>
@@ -277,17 +277,24 @@
       <option name="project" value="LOCAL" />
       <updated>1589362457264</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="521">
+      <created>1590055818028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590055818028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52709000" />
+    <option name="totallyTimeSpent" value="63991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.41577825" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.42057568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -348,7 +355,8 @@
     <MESSAGE value="mybaitis 第一章完结" />
     <MESSAGE value="mybaitis第二章22页" />
     <MESSAGE value="Merge branch 'master' of https://github.com/liuqian52167/study&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/liuqian52167/study&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="521" />
+    <option name="LAST_COMMIT_MESSAGE" value="521" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/study_book/mysqll/mysql">
@@ -391,6 +399,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4833">
           <caret line="179" column="25" selection-start-line="179" selection-start-column="25" selection-end-line="179" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_book/mianshi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5373">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
         </state>
       </provider>
     </entry>
@@ -439,18 +454,11 @@
     <entry file="file://$PROJECT_DIR$/lq_java/src/com/qian/exception_demo/Exc1.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/study_book/mianshi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="199" selection-start-line="199" selection-end-line="199" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/study_book/jvm/jvm">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="618">
-            <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+          <first_editor relative-caret-position="564">
+            <caret line="115" column="57" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
           </first_editor>
           <second_editor />
         </state>
