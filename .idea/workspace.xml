@@ -2,101 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c210a0cb-7673-4dbf-b067-4544d737b25d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/study_book/redis/redis.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_book/kafka/kafka.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/ForestBlog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ForestBlog/ForestBlog/ForestBlog/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/ForestBlog/src/main/java/com/liuyanzhao/ssm/blog/controller/admin/UploadFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ForestBlog/ForestBlog/ForestBlog/src/main/java/com/liuyanzhao/ssm/blog/controller/admin/UploadFileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/ForestBlog/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ForestBlog/ForestBlog/ForestBlog/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/2017100622490186.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171006224906122.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171006225356181.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007153621950.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007153648208.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/2017100715402014.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007154127663.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007154222212.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007154459334.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155038568.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/2017100715505630.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/2017100715512437.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155135604.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155334244.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155349805.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155410485.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155450773.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155545742.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171007155723341.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/2017100717420134.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171009092338630.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/2017101011593518.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/10/20171010115953489.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914130133732.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/2017091413023799.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914174541164.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914174706560.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/2017091417532789.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914175516362.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914201500472.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914201536198.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914201951167.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914202218330.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914204049762.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914204100691.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914204511611.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914225927794.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914230625582.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914230825367.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170914231507937.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915090929630.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915091612635.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915091739627.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915091753709.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915093359554.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915104717291.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915104936624.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915105045240.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915105115974.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915121208947.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170915150118238.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170918094706198.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170918095247277.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170918095622101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170918105355884.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170918110117226.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170919213840682.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170920210412778.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170922143841757.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/2017092308193347.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2017/9/20170927171445159.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/11/avatar(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/11/avatar(2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/11/avatar(3).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/11/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/11/faker.js.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/11/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/4/2018/4/wshang(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/4/wshang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/avatar(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/avatar(2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/logo(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/nologin.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/u71132229-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/小兰.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/小兰2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/幽灵公主4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/柯南2(1).jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/柯南2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/2018/8/灰原哀.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/admin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/donate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/tomcat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ForestBlog/ForestBlog/uploads/tomcat2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_book/java8/javaGuanFangWenDang" beforeDir="false" afterPath="$PROJECT_DIR$/study_book/java8/javaGuanFangWenDang" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,11 +34,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/study_book/kafka/kafka.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="537">
+                <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/study_book/mybatis/mybatis">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <entry file="file://$PROJECT_DIR$/book">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="27">
+                <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/study_book/Springyuanma/Spring源码">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="432">
+                <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -138,31 +78,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/study_book/mianshi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5325">
-              <caret line="213" selection-start-line="213" selection-end-line="213" />
+            <state relative-caret-position="5373">
+              <caret line="199" selection-start-line="199" selection-end-line="199" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/study_book/jvm/jvm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2900">
-              <caret line="116" column="28" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/study_book/redis/redis.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="766">
-                <caret line="49" selection-start-line="49" selection-end-line="49" />
+              <first_editor relative-caret-position="3105">
+                <caret line="115" column="57" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/study_book/Linux/鸟哥私房菜">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="189">
+                <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lq_java/src/com/qian/io_demo/WriteDemo">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lq_java/src/com/qian/io_demo/iodemo1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lq_java/src/com/qian/exception_demo/Exc1.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -180,14 +146,15 @@
         <option value="$PROJECT_DIR$/study_book/mianshi" />
         <option value="$PROJECT_DIR$/study_book/jvm/jvm" />
         <option value="$PROJECT_DIR$/study_book/redis/redis.md" />
+        <option value="$PROJECT_DIR$/study_book/kafka/kafka.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1416" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,7 +162,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,18 +172,87 @@
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qian" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qian" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="study_book" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="study" type="b2602c69:ProjectViewProjectNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="study_book" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="java8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="study_book" type="462c0819:PsiDirectoryNode" />
+              <item name="Springyuanma" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="study_book" type="462c0819:PsiDirectoryNode" />
+              <item name="微服务" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -285,6 +320,7 @@
       <workItem from="1590258822579" duration="723000" />
       <workItem from="1590848790587" duration="6421000" />
       <workItem from="1590914073245" duration="772000" />
+      <workItem from="1591783711647" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="java8官方文档 异常部分">
       <created>1586106685461</created>
@@ -325,13 +361,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73251000" />
+    <option name="totallyTimeSpent" value="82154000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42408586" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19189766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -339,6 +374,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="MyBatis Builder" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Job test results" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -350,10 +386,11 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50213444" side_tool="true" weight="0.22037652" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49786553" visible="true" weight="0.09048362" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49786553" visible="true" weight="0.21583514" />
       <window_info anchor="bottom" id="Tail" order="12" />
       <window_info anchor="bottom" id="Sequence" order="13" />
       <window_info anchor="bottom" id="MyBatis Log" order="14" />
+      <window_info anchor="right" id="Jenkins" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -401,14 +438,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/study_book/java8/javaGuanFangWenDang">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4833">
-          <caret line="179" column="25" selection-start-line="179" selection-start-column="25" selection-end-line="179" selection-end-column="25" />
+        <state relative-caret-position="426">
+          <caret line="193" column="15" selection-start-line="193" selection-start-column="15" selection-end-line="193" selection-end-column="15" />
         </state>
       </provider>
       <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="113">
             <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_book/微服务/Springcloud">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_book/mybatis/mybatis">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="312">
+            <caret line="330" column="22" selection-start-line="330" selection-start-column="22" selection-end-line="330" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_book/redis/redis.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="766">
+            <caret line="49" selection-start-line="49" selection-end-line="49" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_book/kafka/kafka.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="537">
+            <caret line="43" column="44" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="27">
+            <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
           </first_editor>
           <second_editor />
         </state>
@@ -424,10 +520,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/study_book/微服务/Springcloud">
+    <entry file="file://$PROJECT_DIR$/study_book/mianshi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5373">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study_book/jvm/jvm">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2900">
+          <caret line="116" column="28" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="3105">
+            <caret line="115" column="57" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
+          </first_editor>
           <second_editor />
         </state>
       </provider>
@@ -458,63 +568,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lq_java/src/com/qian/exception_demo/Exc1.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="25">
-            <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/study_book/mybatis/mybatis">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="312">
-            <caret line="330" column="22" selection-start-line="330" selection-start-column="22" selection-end-line="330" selection-end-column="22" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/study_book/mianshi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5325">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/study_book/jvm/jvm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="116" column="28" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="564">
-            <caret line="115" column="57" selection-start-line="115" selection-start-column="57" selection-end-line="115" selection-end-column="57" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/study_book/redis/redis.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="766">
-            <caret line="49" selection-start-line="49" selection-end-line="49" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
   </component>
   <component name="masterDetails">
