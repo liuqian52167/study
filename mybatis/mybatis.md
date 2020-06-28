@@ -279,6 +279,35 @@ mybatis使用接口调用，mybatis使用Java的动态代理可以直接通过�
   <selectKey keyColumn ="id" resultType ="long" keyProperty="id" oerder="after">
   select LAST_INSERT_ID()
   </selectKey>
+  
+  数据库不同，MySQLorder设置为after ，主要是因为当前记录的主键值在insert语句执行完成后才能获取到
+  Oracle要设置为before 因为orcale中要先从序列获取值，再将值 作为主键插入到数据库中。
+  
+  ## 2.5 update
+  
+  ## 2.6 delete
+  
+  ## 2.7 多个接口参数的用法
+  目前接口参数就一种，参数的类型分为两种一种为基本类型一种为javabean
+  
+  多个参数的我们可以将多个参数合并到一个JavaBean里。当参数两三个我们不可能创建新的JavaBean
+  当比较小的时候可以选择用Map类型作为参数或者使用@param注解
+  
+  1马匹作为参数的方法，在Map中通过key来映射xml中sql中的使用参数值名字，value存放值。
+  
+  2@param 
+  给参数配置@Param注解后mybatis会自动将参数封装成Map类型。@Param注解值
+  会作为map的key，因此sql部分可以通过配置的注解值来使用参数。
+  
+  当传出来的是javaBean就要指定参数了，xml要获取就要使用#{user.id}
+  和#{role.name}.
+  
+  ## 2.8 mapper接口的动态代理实现原理
+  ###jdk动态代理基础
+  
+  
+  从代理类中可以看到，当调用一个接口的方法时，会通过接口的全限定名称和当前调用的方法名组合
+  得到一个方法id，这个id值就是namespace和当前调用的方法名
 # 第三章
 # 第四章
 # 第五章
