@@ -308,8 +308,86 @@ mybatis使用接口调用，mybatis使用Java的动态代理可以直接通过�
   
   从代理类中可以看到，当调用一个接口的方法时，会通过接口的全限定名称和当前调用的方法名组合
   得到一个方法id，这个id值就是namespace和当前调用的方法名
-# 第三章
-# 第四章
+# 第三章mybatis注解方式德文基本用法
+mybatis注解方式就是将sql语句直接卸载接口上。这种方式的有点是，对于需求比较简单的线条，效率高缺点是当sql有变化时都需要重新编译代码，
+一般情况下不建议使用注解方式。基本的是@select@Insert@update@Delete四种
+
+## 3.1 @select注解
+在roleMapper中添加如下注解方法
+@select（{"select id,roleName ,createBy",
+    "from sys_role",
+    "where id=#{id}"
+}）
+SysRole selectById(long id);
+
+或者：
+@select({"select id,role_name
+    from sys_role
+    where id=#{id}"
+})
+SysRole selectById(long id);
+
+s使用注解的方式就是在接口方法的基础上添加需要的注解，并写上相应的sql语句。这四种基本注解的参数可以是字符串数组的类型
+也可以是字符串类型。
+
+使用注解同样需要考虑表字段与java属性字段映射的字段。除了使用别名外还可以使用mapUnderscoreToCameCase配置以及
+使用ResultMap方式。
+如select* from sys_role where id =#{id}
+hz select id,role_name,crete_bt from sys_role
+where id=#{id}
+
+使用resultMap方式
+@Result（{
+    @result(property = "id",column="id",id=true),
+    @result(property ="roleName",column="role_name")
+}）
+@select("select id,role_name from sys_role where id=#{id}")
+sysRole selectById(long id);
+
+
+@Results（id="RoleResult", value={
+    @result(property = "id",column="id",id=true),
+    @result(property ="roleName",column="role_name")
+}）
+@select("select id,role_name from sys_role where id=#{id}")
+sysRole selectById(long id);
+
+新增一个方法时，引用这个@Resluts
+@ResultMap("roleResultMap")
+@Select("select * from sys_role")
+List<SysRole> selectAll();
+
+
+## 3.2 Provider注解
+@SelectProvider @InsertProvider@UpadateProvider和@DeleteProvider
+
+创建privilegeMapper接口添加selectById（）方法
+@selectProvider(type=PrivilegeProvider.class,method="selectById")
+SysPrivilege selectBy(long id);
+
+PrivilegeProvider类代码如下
+public class PrivalegeProvider{
+ public string selectById(final Long id){
+ return new SQL(){
+ {
+ SELECT("id,privilege_name.priviege_url");
+ FROM ("sys_Privilege");
+ WHERE("id=#{id}");
+ }
+ }.toString();
+ }
+}
+
+Provider的注解提供了type和method，这个方法必须有返回值，这个值就是要执行的sql语句。
+拼接SQL 语句时使用了口ew SQL () { ... ｝方法。
+或者直接返回sql字符串
+public String selectByid(final Long id) {
+return ” select id, privilege name, privilege url ”+
+” from sys_privilege where id = #{id }”;
+}
+# 第四章 mybatis动态sql
+
+
 # 第五章
 # 第六章
 # 第七章
