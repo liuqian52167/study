@@ -386,6 +386,12 @@ return ” select id, privilege name, privilege url ”+
 ” from sys_privilege where id = #{id }”;
 }
 # 第四章 mybatis动态sql
+mybatis动态sql。使用jdbc或者其他类似框架的人都知道，根据不同条件拼接sql时 不仅不能忘记空格，还有逗号。
+mybatis采用功能强大的OGNL表达式语言，主要有if 、choose（where、oterwise）、trim（where set）
+foreach bind
+## 4.1if用法
+if常用在where语句，通过判断参数值是否使用某个查询条件，他也经常用于UPDATE
+语句中判断是否更新某一个字段，还可以在Insert语句中用来判断是否插入某个字段的值
 
 
 # 第五章
