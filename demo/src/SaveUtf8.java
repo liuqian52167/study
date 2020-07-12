@@ -3,7 +3,7 @@
  * @author lq
  * @date 2020/7/2
  */
-public static void saveAsUTF8(String inputFileUrl, String outputFileUrl) throws IOException {
+public static void mian saveAsUTF8(String inputFileUrl, String outputFileUrl) throws IOException {
     String inputFileEncode = EncodingDetect.getJavaEncode(inputFileUrl);
     System.out.println("inputFileEncode===" + inputFileEncode);
     BufferedReader bufferedReader = new BufferedReader(
